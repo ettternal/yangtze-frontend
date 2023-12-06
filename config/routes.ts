@@ -4,6 +4,18 @@ export default [
     layout: false,
     routes: [{ name: '登录', path: '/user/login', component: './User/Login' }],
   },
+  {
+    path: '/',
+    redirect: '/add_chart', //主页重定向到add页面
+  },
+
+  {
+    path: '/add_chart',
+    name: '智能分析',
+    icon: 'smile',
+    component: './AddChart',
+  },
+
   { path: '/welcome', name: '欢迎', icon: 'smile', component: './Welcome' },
   {
     path: '/admin',
@@ -15,7 +27,6 @@ export default [
       { path: '/admin/sub-page', name: '二级管理页', component: './Admin' },
     ],
   },
-  { name: '查询表格', icon: 'table', path: '/list', component: './TableList' },
   { path: '/', redirect: '/welcome' },
   { path: '*', layout: false, component: './404' },
 ];
